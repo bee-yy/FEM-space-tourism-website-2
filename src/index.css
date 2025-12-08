@@ -1,0 +1,541 @@
+
+/*
+===========
+Variables
+===========
+*/
+
+:root {
+  /* ==================== COLORS ==================== */
+  
+  /* Blue Palette */
+  --blue-900: #000032;
+  --blue-900-rgb: 0, 0, 50;
+  --blue-900-hsl: 240deg, 100%, 10%;
+  
+  --blue-300: #C0C9E9;
+  --blue-300-rgb: 192, 201, 233;
+  --blue-300-hsl: 227deg, 57%, 83%;
+  
+  /* Neutral Colors */
+  --white: #FFFFFF;
+  --white-rgb: 255, 255, 255;
+  --white-hsl: 0deg, 0%, 100%;
+  
+  /* ==================== TYPOGRAPHY ==================== */
+  
+  --ff-bellefair: "Bellefair", serif;
+  --ff-barlow: "Barlow", sans-serif;
+  --ff-barlow-condensed: "Barlow Condensed", sans-serif;
+  
+  
+  /* ==================== SPACING ==================== */
+  
+ --spacing-128: 128px; /* 1600 */
+  --spacing-96: 96px;   /* 1200 */
+  --spacing-80: 80px;   /* 1000 */
+  --spacing-64: 64px;   /* 800 */
+  --spacing-48: 48px;   /* 600 */
+  --spacing-40: 40px;   /* 500 */
+  --spacing-32: 32px;   /* 400 */
+
+  /* Mid spacing */
+  --spacing-24: 24px;   /* 300 */
+  --spacing-16: 16px;   /* 200 */
+  --spacing-12: 12px;   /* 150 */
+  --spacing-8: 8px;     /* 100 */
+
+  /* Small spacing */
+  --spacing-4: 4px;     /* 50 */
+  --spacing-2: 2px;     /* 25 */
+  
+}
+
+/* ==================== TEXT PRESET CLASSES ==================== */
+
+
+.text-preset-1 {
+  font-family: var(--ff-bellefair);
+  line-height: 171.9%;
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+/* Preset 2 — Page main title (e.g. "01 PICK YOUR DESTINATION") */
+.text-preset-2 {
+  font-family: var(--ff-bellefair);
+  line-height: 114.6%;
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+/* Preset 3 — Sub-page headings (e.g. planet names on destination page) */
+.text-preset-3 {
+  font-family: var(--ff-bellefair);
+  /* line-height: 64.2%; */
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+/* Preset 4 — Smaller headings (e.g. crew role, tech name) */
+.text-preset-4 {
+  font-family: var(--ff-bellefair);
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+/* Preset 5 — Nav text & numbers like "01", "02" */
+.text-preset-5 {
+  font-family: var(--ff-barlow-condensed);
+  letter-spacing: 4px;   /* or 4.75px if you want exact match */
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* Preset 6 — Used rarely (some headings) */
+.text-preset-6 {
+  font-family: var(--ff-bellefair);
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+/* Preset 7 — Subheadings like "SO, YOU WANT TO TRAVEL TO" */
+.text-preset-7 {
+  font-family: var(--ff-barlow-condensed);
+  letter-spacing: 2px;   /* or 2.35px for pixel-perfect */
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* Preset 8 — Navigation links (desktop) */
+.text-preset-8 {
+  font-family: var(--ff-barlow-condensed);
+  letter-spacing: 2px;   /* or 2.7px for exact */
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* Preset 9 — Body text, descriptions, paragraphs */
+.text-preset-9 {
+  font-family: var(--ff-barlow);
+  line-height: 180%;   /* 32px exactly in the design */
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+
+
+/* * Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 767px){
+
+  .text-preset-1 {
+  font-size: 80px;
+}
+
+/* Preset 2 — Page main title (e.g. "01 PICK YOUR DESTINATION") */
+.text-preset-2 {
+  font-size: 56px;
+}
+
+/* Preset 3 — Sub-page headings (e.g. planet names on destination page) */
+.text-preset-3 {
+  font-size: 24px;
+  
+}
+
+/* Preset 4 — Smaller headings (e.g. crew role, tech name) */
+.text-preset-4 {
+  font-size: 18px;
+}
+
+/* Preset 5 — Nav text & numbers like "01", "02" */
+.text-preset-5 {
+  font-size: 24px;
+ 
+}
+
+/* Preset 6 — Used rarely (some headings) */
+.text-preset-6 {
+  font-size: 16px;
+}
+
+/* Preset 7 — Subheadings like "SO, YOU WANT TO TRAVEL TO" */
+.text-preset-7 {
+  font-size: 14px;
+}
+
+/* Preset 8 — Navigation links (desktop) */
+.text-preset-8 {
+  font-size: 14px;
+}
+
+/* Preset 9 — Body text, descriptions, paragraphs */
+.text-preset-9 {
+  font-size: 15px;
+  line-height: 180%;
+}
+}
+@media only screen and (min-width: 768px) {
+ 
+
+/* Preset 2 — Page main title (e.g. "01 PICK YOUR DESTINATION") */
+section{
+  gap: 0;
+}
+.text-preset-1 {
+  font-size: 144px;
+}
+
+.text-preset-2 {
+  font-size: 80px;
+}
+
+
+/* Preset 3 — Sub-page headings (e.g. planet names on destination page) */
+.text-preset-3 {
+  font-size: 40px;
+  
+}
+
+/* Preset 4 — Smaller headings (e.g. crew role, tech name) */
+.text-preset-4 {
+  font-size: 24px;
+}
+
+/* Preset 5 — Nav text & numbers like "01", "02" */
+.text-preset-5 {
+  font-size: 28px;
+ 
+}
+.text-preset-6 {
+  font-size: 20px;
+ 
+}
+.text-preset-7 {
+  font-size: 20px;
+ 
+}
+.text-preset-8 {
+  font-size: 16px;
+ 
+}
+
+/* Preset 9 — Body text, descriptions, paragraphs */
+.text-preset-9 {
+  font-size: 16px;
+  
+}
+
+}
+
+
+@media only screen and (min-width: 992px){
+  
+.text-preset-1 {
+  font-size: 144px;
+}
+
+/* Preset 2 — Page main title (e.g. "01 PICK YOUR DESTINATION") */
+.text-preset-2 {
+  font-size: 100px;
+}
+
+/* Preset 3 — Sub-page headings (e.g. planet names on destination page) */
+.text-preset-3 {
+  font-size: 56px
+}
+
+/* Preset 4 — Smaller headings (e.g. crew role, tech name) */
+.text-preset-4 {
+  font-size: 32px;
+  
+}
+
+/* Preset 5 — Nav text & numbers like "01", "02" */
+.text-preset-5 {
+  font-size: 28px;
+}
+
+/* Preset 6 — Used rarely (some headings) */
+.text-preset-6 {
+  font-size: 28px;
+}
+
+/* Preset 7 — Subheadings like "SO, YOU WANT TO TRAVEL TO" */
+.text-preset-7 {
+  font-size: 14px;
+}
+
+/* Preset 8 — Navigation links (desktop) */
+.text-preset-8 {
+  font-size: 16px;
+}
+
+/* Preset 9 — Body text, descriptions, paragraphs */
+.text-preset-9 {
+  font-size: 18px;
+  
+}
+}
+
+@media only screen and (min-width:1200px){
+.text-preset-1 {
+  font-family: var(--ff-bellefair);
+  font-size: 144px;
+  line-height: 171.9%;
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+/* Preset 2 — Page main title (e.g. "01 PICK YOUR DESTINATION") */
+.text-preset-2 {
+  font-family: var(--ff-bellefair);
+  font-size: 100px;
+  line-height: 114.6%;
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+/* Preset 3 — Sub-page headings (e.g. planet names on destination page) */
+.text-preset-3 {
+  font-family: var(--ff-bellefair);
+  font-size: 56px;
+  /* line-height: 64.2%; */
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+/* Preset 4 — Smaller headings (e.g. crew role, tech name) */
+.text-preset-4 {
+  font-family: var(--ff-bellefair);
+  font-size: 32px;
+  /* line-height: 36.7%; */
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+/* Preset 5 — Nav text & numbers like "01", "02" */
+.text-preset-5 {
+  font-family: var(--ff-barlow-condensed);
+  font-size: 28px;
+  letter-spacing: 4px;   /* or 4.75px if you want exact match */
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* Preset 6 — Used rarely (some headings) */
+.text-preset-6 {
+  font-family: var(--ff-bellefair);
+  font-size: 28px;
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+/* Preset 7 — Subheadings like "SO, YOU WANT TO TRAVEL TO" */
+.text-preset-7 {
+  font-family: var(--ff-barlow-condensed);
+  font-size: 14px;
+  letter-spacing: 2px;   /* or 2.35px for pixel-perfect */
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* Preset 8 — Navigation links (desktop) */
+.text-preset-8 {
+  font-family: var(--ff-barlow-condensed);
+  font-size: 16px;
+  letter-spacing: 2px;   /* or 2.7px for exact */
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* Preset 9 — Body text, descriptions, paragraphs */
+.text-preset-9 {
+  font-family: var(--ff-barlow);
+  font-size: 18px;
+  line-height: 180%;   /* 32px exactly in the design */
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+}
+
+
+
+
+/* || RESETS */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  line-height: 1.5;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  /* all: unset; */
+  outline-color: transparent;
+
+}
+
+
+li{
+list-style-type:none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+/* height:100%*/
+}
+
+
+
+/*
+  ===========
+  UTILITY CLASSES
+  ===========
+  */
+
+.blue{
+    color: var(--blue-300);
+}
+
+.upper-case{
+    text-transform: uppercase;
+}
+/*
+  ===========
+  LAYOUT
+  ===========
+  */
+
+  html,body{
+    overflow-x: hidden;
+  }
+
+
+.page-wrapper{
+  width: 100%;
+  min-height: 100vh;
+}
+
+header{
+  padding:var(--spacing-24)  var(--spacing-24) 0;
+
+}
+
+
+
+/*
+===========
+TYPOGRAPHY
+===========
+*/
+
+
+
+/*
+=================================
+BACKGROUND/IMAGES/COLORS
+=================================
+*/
+
+/* HOME */
+.page-background{
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.home-page {
+  background-image: url(./assets/home-background-mobile.jpg);
+  
+}
+@media (min-width: 768px) {
+  .home-page {
+    background-image: url(./assets/home-bacground-tablet.jpg);
+  }
+}
+@media (min-width: 1024px) or (min-width: 1200px) {
+  .home-page {
+    background-image: url(./assets/home-background.jpg);
+  }
+}
+
+.destination-page{
+  background-image: url(./assets/destination-background.jpg);
+}
+
+.crew-page{
+  background-image: url(./assets/crew-background.jpg);
+}
+
+.technology-page{
+  background-image: url(./assets/technology-background.jpg);
+}
+
+
+
+
+ /*
+=============
+ACTIVE-STATES
+=============
+*/
+
+
+/*
+=====================================
+LARGE SCREENS 
+=====================================
+*/
+
+/* * Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 767px){}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 768px){
+    .page-wrapper{
+      /* border: 2px solid red; */
+  padding: 0 0 0 var(--spacing-40);
+  
+
+}
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px){
+   .page-wrapper{
+  padding: var(--spacing-0) 0 0 var(--spacing-64);
+  
+
+}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){
+
+ .page-wrapper{
+  padding: var(--spacing-40) 0 0 var(--spacing-64);
+  
+
+}
+
+}
+
+
+
+

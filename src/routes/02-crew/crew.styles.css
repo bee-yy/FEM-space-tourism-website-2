@@ -1,0 +1,158 @@
+#crew-section{
+    /* border: 2px solid ; */
+    height: 100%;
+    padding: var(--spacing-24);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-24);
+}
+
+#crew-section .title{
+    /* border: 2px solid; */
+    width: 100%;
+    display: flex;
+    gap: var(--spacing-24);
+    justify-content: center;
+}
+
+.crew-content-lhs{
+    margin-top: var(--spacing-40);
+    text-align: center;
+    min-height: 317px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+   justify-content: space-between;
+    gap: var(--spacing-24);
+    max-width: 66ch;
+     margin-inline:auto;
+}
+
+.subtitle{
+    display: block;
+    opacity: 50%;
+}
+
+
+.crew-content-rhs{
+    margin-top: ar(--spacing-24);
+}
+
+.crew-member{
+    margin-bottom: var(--spacing-24);
+}
+
+.pagination-dots{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: var(--spacing-16);
+
+    justify-self: end;
+    align-self: end;
+}
+
+
+.dot{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #979797;  
+}
+
+
+li.active span{
+    background-color: var(--white);
+}
+
+
+.crew-content-rhs{
+    margin-top: var(--spacing-32);
+    padding: var(--spacing-16);
+}
+
+.crew-image-wrapper{
+    width: 271px;
+    height: 340px;
+    margin-inline: auto;
+    background-color: transparent;
+}
+
+.crew-image-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media only screen and (min-width: 768px) {
+#crew-section .title{
+    /* border: 2px solid; */
+    justify-content: start;
+}
+
+.crew-content-rhs{
+   /* border: 2px solid; */
+}
+
+.crew-image-wrapper{
+    width: 447px;
+    height: 400px;
+    margin-inline: auto;
+}
+
+.crew-image-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+   
+    
+#crew-section{
+    min-height: 80vh;
+    align-items: center;
+}
+
+.crew-content-wrapper{
+    max-width: 1110px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-32);
+}
+
+ .crew-content-lhs{
+    justify-content: space-around;
+    text-align: left;
+}
+
+.crew-content-rhs, .crew-content-lhs {
+    height: 734px;
+
+}
+
+
+
+
+
+
+.crew-image-wrapper{
+    width: 539px;
+    height: 674px;
+    margin-inline: auto;
+}
+
+.crew-image-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+  
+}
