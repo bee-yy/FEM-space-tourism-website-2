@@ -1,35 +1,38 @@
-// // File: src/ThemeColor.jsx   (or .tsx if you're using TypeScript)
-
+// src/ThemeColor.jsx
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-export default function ThemeColor() {
+export default function ThemeColorUpdater() {
   const location = useLocation();
 
   useEffect(() => {
-    // Change this object if you ever add a page with a different background color
     const pageColors = {
-        
-  "/": "#0D0F1C",      
-  "/destination": "#131522", 
-  "/crew": "#181B24", 
-  "/technology": "#12101E" 
-
-
+      "/": "#0D0F1C",      
+      "/destination": "#131522", 
+      "/crew": "#181B24", 
+      "/technology": "#12101E" 
     };
 
     const currentColor = pageColors[location.pathname] || "#0B0D17";
 
-    // Update the main theme-color meta tag
-    document
-      .querySelector('meta[name="theme-color"]')
-      ?.setAttribute("content", currentColor);
+    // iOS Safari workaround: Remove and re-add the meta tag
+    let metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.remove();
+    }
+    
+    // Create fresh meta tag
+    metaThemeColor = document.createElement('meta');
+    metaThemeColor.name = 'theme-color';
+    metaThemeColor.content = currentColor;
+    document.head.appendChild(metaThemeColor);
 
-    // Optional: also update Android-specific one
-    document.querySelector('meta[name="msapplication-navbutton-color"]')
-      ?.setAttribute("content", currentColor);
-  }, [location.pathname]); // Runs every time the page/route changes
+    // Optional: Android-specific
+    let msAppMeta = document.querySelector('meta[name="msapplication-navbutton-color"]');
+    if (msAppMeta) {
+      msAppMeta.setAttribute("content", currentColor);
+    }
+  }, [location.pathname]);
 
-  // This component doesn't show anything on screen
   return null;
 }
