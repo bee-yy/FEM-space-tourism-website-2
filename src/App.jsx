@@ -8,8 +8,13 @@ import Destination from "./routes/01-destination/destination.component.jsx";
 import Crew from "./routes/02-crew/crew.component.jsx";
 import Technology from "./routes/03-technology/technonlogy.component";
 
+import ThemeColorUpdater from './themeColorUpdater.jsx';
+
+
 function App() {
   return (
+    <>
+     <ThemeColorUpdater />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -18,6 +23,7 @@ function App() {
           <Route path="technology" element={<Technology />} />
         </Route>
       </Routes>
+      </>
   
   );
 }
