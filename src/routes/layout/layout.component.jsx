@@ -4,6 +4,10 @@ import Header from '../../components/header/header.component.jsx'
 
 
 function Layout(){
+
+
+
+    
 const { pathname } = useLocation();
 
 function getPageClass() {
