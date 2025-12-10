@@ -460,7 +460,7 @@ background-repeat: no-repeat;
 background-size: cover;
 }
 .home-page {
-  background-color: var(--blue-900);
+  background-color: #0C1019;
   background-image: url(./assets/home-background-mobile.jpg);
   
 }
