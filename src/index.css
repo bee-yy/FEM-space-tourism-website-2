@@ -476,15 +476,22 @@ background-size: cover;
 }
 
 .destination-page{
+  background-color: #111320;
   background-image: url(./assets/destination-background.jpg);
+
 }
 
 .crew-page{
+  background-color: #1C1F28;
   background-image: url(./assets/crew-background.jpg);
+
+
 }
 
 .technology-page{
+  background-color: #131522;
   background-image: url(./assets/technology-background.jpg);
+
 }
 
 
